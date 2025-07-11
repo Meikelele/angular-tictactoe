@@ -3,8 +3,11 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-square',
   imports: [],
-  templateUrl: './square.component.html',
-  styleUrl: './square.component.scss'
+  template: `
+    <button>{{ value }}</button>
+
+  `,
+  styles: ['button { width: 100%; height: 100%; font-size: 5em !important; }']
 })
 export class SquareComponent {
   @Input() value: 'X' | 'O' = 'X';
